@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="css/plugins/owl.carousel.min.css">
     <link rel="stylesheet" href="css/plugins/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/plugins/jquery.animatedheadline.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
 
     <!-- CSS Base/CSS Principla -->
     <link rel="stylesheet" class="back-color" href="css/style-dark.css">
@@ -431,6 +434,7 @@
                                                 <i class="fas fa-desktop"></i>
                                                 <h4>Web Design And Development</h4>
                                                 <p>In PHP using DHTMLX, I created two Gantt calendars as well as a website. Due to company policies, I can't show the code, but here are the results:</p>
+                                                <button id="myButton" class="btn-st">Show</button>
                                             </div>
                                         </div>
 
@@ -441,6 +445,7 @@
                                                 <i class="fas fa-mobile-alt"></i>
                                                 <h4>Mobile App Development</h4>
                                                 <p>I developed an app in Java using Android Studio and in Swift using Xcode. Due to company policies, I can't show the code, but here are some pictures of the final result. The app is published on the Apple Store and Google Play.</p>
+                                                <button id="myButton" class="btn-st">Show</button>
                                             </div>
                                         </div>
 
@@ -450,6 +455,7 @@
                                                 <i class="fas fa-cogs"></i>
                                                 <h4>MacOS Server configuration</h4>
                                                 <p>The designs of applications or websites will be made adaptable to any device.</p>
+                                                <button id="myButton" class="btn-st">Show</button>
                                             </div>
                                         </div>
 
@@ -459,7 +465,9 @@
                                                 <i class="fas fa-medkit"></i>
                                                 <h4>Quick Support</h4>
                                                 <p>Soporte a servicios de software a varios lenguajes como, ASP Framework and ASP.NET Core,C#,Flutter,Java,Javascript,Html....</p>
+                                                <button id="myButton" class="btn-st">Show</button>
                                             </div>
+                                            
                                         </div>
                                     </div>
 
@@ -492,9 +500,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="footer-price">
-                                                    <a href="#" class="btn-st">Buy Now</a>
-                                                </div>
+                                                
                                             </div>
                                         </div>
 
@@ -517,9 +523,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="footer-price">
-                                                    <a href="#" class="btn-st">Buy Now</a>
-                                                </div>
+                                                
                                             </div>
                                         </div>
 
@@ -544,9 +548,6 @@
                                                             <li>Responsibility</li>
                                                         </ul>
                                                     </div>
-                                                </div>
-                                                <div class="footer-price">
-                                                    <a href="#" class="btn-st">Buy Now</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -882,6 +883,21 @@
     <script src="js/main.js"></script>
     <script src="js/main-demo.js"></script>
     <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    document.getElementById('myButton').addEventListener('click', function() {
+        Swal.fire({
+            title: "Sweet!",
+            text: "Modal with a custom image.",
+            imageUrl: "https://unsplash.it/400/200",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+        });
+    });
+</script>
 
 </body>
 
