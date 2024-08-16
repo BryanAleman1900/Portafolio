@@ -464,6 +464,7 @@
                                                 <i class="fas fa-medkit"></i>
                                                 <h4>Software Development at University</h4>
                                                 <p>Here, I will showcase some of the projects I have developed over the course of my time at university.</p>
+                                                <button id="myButton3" class="btn-st">Show</button>
                                             </div>
                                             
                                         </div>
@@ -487,9 +488,7 @@
                                                 </div>
                                                 <div class="body-price">
                                                     <div class="price-plan">
-                                                        <span class="currency">$</span>
-                                                        <span class="number">25</span>
-                                                        <span class="period">month</span>
+                                                        <span class="period">----</span>
                                                     </div>
                                                     <div class="list-price">
                                                         <ul>
@@ -511,9 +510,7 @@
                                                 </div>
                                                 <div class="body-price">
                                                     <div class="price-plan">
-                                                        <span class="currency">$</span>
-                                                        <span class="number">40</span>
-                                                        <span class="period">month</span>
+                                                        <span class="period">----</span>
                                                     </div>
                                                     <div class="list-price">
                                                         <ul>
@@ -534,9 +531,7 @@
                                                 </div>
                                                 <div class="body-price">
                                                     <div class="price-plan">
-                                                        <span class="currency">$</span>
-                                                        <span class="number">55</span>
-                                                        <span class="period">month</span>
+                                                        <span class="period">----</span>
                                                     </div>
                                                     <div class="list-price">
                                                         <ul>
@@ -950,7 +945,38 @@
       showCarousel();
     });
   </script>
+  <script>
+    document.getElementById('myButton3').addEventListener('click', function() {
+      const images = [
+        "./img/VM.png",
+        "./img/Ubuntu.png",
+        "./img/WINSERVER.png"
+      ];
+      let currentImage = 0;
   
+      const showCarousel = () => {
+        Swal.fire({
+          title: "Sweet!",
+          text: "Modal with a custom image.",
+          imageUrl: images[currentImage],
+          imageWidth: 600,  // Ajusta el ancho a 150 píxeles
+          imageHeight: 300, // Ajusta la altura a 200 píxeles
+          imageAlt: "Custom image",
+          showCancelButton: true,
+          confirmButtonText: currentImage === images.length - 1 ? "Finish" : "Next",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            if (currentImage < images.length - 1) {
+              currentImage++;
+              showCarousel();
+            }
+          }
+        });
+      };
+  
+      showCarousel();
+    });
+  </script>
 
 </body>
 
