@@ -445,7 +445,7 @@
                                                 <i class="fas fa-mobile-alt"></i>
                                                 <h4>Mobile App Development</h4>
                                                 <p>I developed an app in Java using Android Studio and in Swift using Xcode. Due to company policies, I can't show the code, but here are some pictures of the final result. The app is published on the Apple Store and Google Play.</p>
-                                                <button id="myButton" class="btn-st">Show</button>
+                                                <button id="myButton2" class="btn-st">Show</button>
                                             </div>
                                         </div>
 
@@ -455,7 +455,6 @@
                                                 <i class="fas fa-cogs"></i>
                                                 <h4>MacOS Server configuration</h4>
                                                 <p>The designs of applications or websites will be made adaptable to any device.</p>
-                                                <button id="myButton" class="btn-st">Show</button>
                                             </div>
                                         </div>
 
@@ -465,7 +464,6 @@
                                                 <i class="fas fa-medkit"></i>
                                                 <h4>Quick Support</h4>
                                                 <p>Soporte a servicios de software a varios lenguajes como, ASP Framework and ASP.NET Core,C#,Flutter,Java,Javascript,Html....</p>
-                                                <button id="myButton" class="btn-st">Show</button>
                                             </div>
                                             
                                         </div>
@@ -888,16 +886,70 @@
 
 <script>
     document.getElementById('myButton').addEventListener('click', function() {
+      const images = [
+        "./img/calendar.jpeg",
+        "./img/calendar2.png",
+        "./img/desing.png"
+      ];
+      let currentImage = 0;
+  
+      const showCarousel = () => {
         Swal.fire({
-            title: "Sweet!",
-            text: "Modal with a custom image.",
-            imageUrl: "https://unsplash.it/400/200",
-            imageWidth: 400,
-            imageHeight: 200,
-            imageAlt: "Custom image"
+          title: "Sweet!",
+          text: "Modal with a custom image.",
+          imageUrl: images[currentImage],
+          imageWidth: 600,  // Ajusta el ancho a 150 píxeles
+          imageHeight: 300, // Ajusta la altura a 200 píxeles
+          imageAlt: "Custom image",
+          showCancelButton: true,
+          confirmButtonText: currentImage === images.length - 1 ? "Finish" : "Next",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            if (currentImage < images.length - 1) {
+              currentImage++;
+              showCarousel();
+            }
+          }
         });
+      };
+  
+      showCarousel();
     });
-</script>
+  </script>
+  
+  <script>
+    document.getElementById('myButton2').addEventListener('click', function() {
+      const images = [
+        "./img/app.jpeg",
+        "./img/app2.jpeg",
+        "./img/app3.png"
+      ];
+      let currentImage = 0;
+  
+      const showCarousel = () => {
+        Swal.fire({
+          title: "Sweet!",
+          text: "Modal with a custom image.",
+          imageUrl: images[currentImage],
+          imageWidth: 150,  // Ajusta el ancho a 150 píxeles
+          imageHeight: 350, // Ajusta la altura a 200 píxeles
+          imageAlt: "Custom image",
+          showCancelButton: true,
+          confirmButtonText: currentImage === images.length - 1 ? "Finish" : "Next",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            if (currentImage < images.length - 1) {
+              currentImage++;
+              showCarousel();
+            }
+          }
+        });
+      };
+  
+      showCarousel();
+    });
+  </script>
+  
 
 </body>
 
